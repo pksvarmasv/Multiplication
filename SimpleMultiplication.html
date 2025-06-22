@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="common.css" />
+    <title>Simple Multiplication</title>
+</head>
+<body onkeydown="tblKeyDown(event)">
+    <div id="main-container">
+        <div class="column-left">
+            <div class="header_region">
+                <header>
+                    <h1 style="text-align:center">Multiply Two Numbers
+                </header>
+            </div>
+            <div class="edit_region">
+                <!-- <div class="test-height">row-1-1</div> -->
+                <div style="margin-bottom:10px">
+                    <label for="number1">Number 1: </label>
+                    <input type="text" id="number1" name="number1" required>
+                </div>
+                <div style="margin-bottom:10px">
+                    <label for="number2">Number 2: </label>
+                    <input type="text" id="number2" name="number2" required>
+                </div>
+
+                <button id="btnSolve" type="button" onclick="solve()">Solve</button>
+                <button id="btnNextStep" type="button" onclick="stepByStep()">Step-By-Step</button>
+                <button id="btnExercise" type="button" onclick="exercise()">Exercise</button>
+                <button id="btnVerify" type="button" disabled onclick="verify()">Verify</button>
+            </div>
+            <div class="worksheet_region">
+                <table id="Tbl" role="grid" style="visibility:hidden">
+                    <caption id="editableTableDesc">WorkSheet</caption>
+                    <thead>
+                        <tr>
+                            <th scope="row">Carry</th>
+                            <td contenteditable="false">R1C1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Number 1</th>
+                            <td contenteditable="false">R2C1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Number 2</th>
+                            <td contenteditable="false">R3C1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Result</th>
+                            <td contenteditable="false">R4C1</td>
+                        </tr>
+                </table>
+
+            </div>
+            <div class="answer_region">
+                <h2 id="AnswerHeading" style="visibility:hidden">Answer</h2>
+                <p id="Answer" style="visibility:hidden"> </p>
+            </div>
+            <div class="filler_region">
+            </div>
+
+        </div>
+        <div class="column-right">
+            <div class="help_region">
+                <h2 style="background-color:#FFEA00">About This Tool</h2>
+                <p id="helpInfo">
+                    <b>
+                        - This lesson will teach you how to multiply two numbers.<br>
+                        - To begin with, first Enter the 2 numbers you want to multiply into the boxes named "Number 1" and "Number 2" <br>
+                        - For example if you want to multiply 123 x 456, you can enter 123 for Number1 and 456 for Number2. <br>
+                        - To get the answer, click "Solve". <br>
+                        - For step-by-step explanation on how to solve the problem, click "Step-By-Step". You can then also use Ctrl-Alt-t as shortcut for the next step <br>
+                        - If you want to solve it by yourself, click "Exercise". After completing the exercise, you can check if your answer is correct by clicking "Verify".
+                        Or you can also use Ctrl-Alt-v to verify your answer.
+                    </b>
+                </p>
+            </div>
+            <div class="steps_region">
+                <h2 id="StepsHeading" style="visibility:hidden" style="background-color:#FFEA00" >Steps</h2>
+                <p id="Steps" style="visibility:hidden"><b>Message.</b><br> </p>
+			</div>
+			            <div class="copyright">
+                <p id="copyrightStr">
+                    Copyright &copy; 2022 JANBAV. All rights reserved.<br>
+                    Email: contact@janbav.org
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="SimpleMultiplication.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.column-left {
+    display: grid;
+    overflow: auto;
+    grid-template-rows: 10% 20% 1fr 10% 10%;
+}
+
+.edit_region {
+    padding-left: 10px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+.column-right {
+    display: grid;
+    grid-template-rows: 35% 1fr 10%;
+    overflow: auto;
+}
+
+.worksheet_region {
+    padding-left: 10px;
+    overflow: auto;
+}
+
+.answer_region {
+    padding-left: 10px;
+}
+
+.filler_region {
+    background-color: black;
+}
+
+.header_region {
+    background-color: black;
+	color: white;
+}
+
+.help_region {
+    background-color: white /*#AED6F1*/;
+	padding-left: 10px;
+}
+
+.steps_region {
+    background-color: white/*#AED6F1*/; 
+	padding-left: 10px;
+    overflow: auto;
+}
+
+.copyright {
+    background-color: black;
+    color: white;
+	padding-top: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 80%;
+    height: 20%;
+}
+
+th, td {
+    background-color: black;
+    color: white;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table caption {
+    padding: 10px;
+    background: #FFEA00; /* yellow;*/
+    font-weight: bold;
+}
